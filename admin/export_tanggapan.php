@@ -1,7 +1,7 @@
 <?php
 
-header("Content-type: application/vnd-ms-excel");
-header("Content-Dispostion: attachment; filename=data pengaduan dan tanggapan.xlsx");
+header("Content-type:application/vnd-ms-excel");
+header("Content-Disposition:attachment;filename=tanggapan.xls");
 ?>
 <center>
     <h3>LAPORAN PENGADUAN & TANGGAPAN <br> UKK RPL T.A 2022/2023</h3>
