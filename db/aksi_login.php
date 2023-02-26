@@ -20,17 +20,26 @@ if ($cek > 0) {
         $_SESSION['id_petugas'] = $data['id_petugas'];
         $_SESSION['nama_petugas'] = $data['nama_petugas'];
         $_SESSION['login'] = "admin";
-        header('location:../admin/');
+        echo "<script>
+                alert('Berhasil Login');
+                window.location='../admin/';
+            </script>";
     } elseif ($data['level'] == 'petugas') {
         $_SESSION['id_petugas'] = $data['id_petugas'];
         $_SESSION['nama_petugas'] = $data['nama_petugas'];
         $_SESSION['login'] = "petugas";
-        header('location:../admin/');
+        echo "<script>
+                alert('Berhasil Login');
+                window.location='../admin/';
+            </script>";
     } elseif ($data['level'] == 'masyarakat') {
         $_SESSION['nik'] = $data['nik'];
         $_SESSION['nama'] = $data['nama'];
         $_SESSION['login'] = "masyarakat";
-        header('location:../masyarakat/');
+        echo "<script>
+                alert('Berhasil Login');
+                window.location='../masyarakat/';
+            </script>";
     }
 } else {
     echo "<script>

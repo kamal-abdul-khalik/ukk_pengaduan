@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Aplikasi Pengaduan Masyarakat</a>
+            <a class="navbar-brand text-white" href="index.php">Aplikasi Pengaduan Masyarakat</a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -20,19 +20,19 @@
                 <div class="navbar-nav">
                     <?php
                     if ($_SESSION['login'] == 'admin') { ?>
-                        <a class="nav-link" href="index.php?page=pengaduan">Pengaduan</a>
-                        <a class="nav-link" href="index.php?page=tanggapan">Tanggapan</a>
-                        <a class="nav-link" href="index.php?page=masyarakat">Data Masyarakat</a>
-                        <a class="nav-link" href="index.php?page=petugas">Data Petugas</a>
-                        <a class="nav-link" href="../db/aksi_logout.php">Keluar</a>
+                        <a class="nav-link text-white" href="index.php?page=pengaduan">Pengaduan</a>
+                        <a class="nav-link text-white" href="index.php?page=tanggapan">Tanggapan</a>
+                        <a class="nav-link text-white" href="index.php?page=masyarakat">Data Masyarakat</a>
+                        <a class="nav-link text-white" href="index.php?page=petugas">Data Petugas</a>
+                        <a class="nav-link text-white" href="../db/aksi_logout.php">Keluar</a>
                     <?php } elseif ($_SESSION['login'] == 'petugas') { ?>
-                        <a class="nav-link" href="index.php?page=pengaduan">Pengaduan</a>
-                        <a class="nav-link" href="../db/aksi_logout.php">Keluar</a>
+                        <a class="nav-link text-white" href="index.php?page=pengaduan">Pengaduan</a>
+                        <a class="nav-link text-white" href="../db/aksi_logout.php">Keluar</a>
                     <?php } elseif ($_SESSION['login'] == 'masyarakat') { ?>
-                        <a class="nav-link" href="../db/aksi_logout.php">Keluar</a>
+                        <a class="nav-link text-white" href="../db/aksi_logout.php">Keluar</a>
                     <?php } else { ?>
-                        <a class="nav-link" href="index.php?page=register">Daftar</a>
-                        <a class="nav-link" href="index.php?page=login">Login</a>
+                        <a class="nav-link text-white" href="index.php?page=register">Daftar</a>
+                        <a class="nav-link text-white" href="index.php?page=login">Login</a>
                     <?php } ?>
                 </div>
             </div>

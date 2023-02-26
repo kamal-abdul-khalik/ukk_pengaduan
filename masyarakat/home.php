@@ -88,6 +88,8 @@
                                             echo '<span class="badge badge-info">Proses</span>';
                                         } else {
                                             echo '<span class="badge badge-success">Selesai</span>';
+                                            echo '<br>';
+                                            echo "<a href='index.php?page=tanggapan&id_pengaduan=$data[id_pengaduan]'>Lihat Tanggapan</a>";
                                         }
                                         ?>
                                     </td>

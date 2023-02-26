@@ -43,8 +43,8 @@
                                     </td>
                                     <td><img width="150px" src="../assets/foto/<?php echo $data['foto']  ?>"></td>
                                     <td>
-                                        <?php include 'tombol_verifikasi.php'; ?>
-                                        <?php include 'tombol_tanggapan.php'; ?>
+                                        <?php $data['status'] == 'selesai' || $data['status'] == 'proses' ? '' : include 'tombol_verifikasi.php'; ?>
+                                        <?php $data['status'] == 'selesai' ? '' : include 'tombol_tanggapan.php'; ?>
                                         <?php include 'tombol_hapus.php'; ?>
                                     </td>
                                 </tr>

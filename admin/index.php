@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (empty($_SESSION['login'] == 'admin' || $_SESSION['login'] == 'petugas')) {
+    echo "<script>
+                alert('Silahkan login dulu');
+                window.location='../index.php?page=login';
+            </script>";
+}
 include '../template/header.php';
 
 if (isset($_GET['page'])) {
@@ -13,10 +19,10 @@ if (isset($_GET['page'])) {
             include 'data_tanggapan.php';
             break;
         case 'petugas':
-            include 'data_petugas.php';
+            include 'data_petugas/data_petugas.php';
             break;
         case 'masyarakat':
-            include 'data_masyarakat.php';
+            include 'data_masyarakat/data_masyarakat.php';
             break;
         default:
             echo 'Maaf halaman tidak ditemukan';

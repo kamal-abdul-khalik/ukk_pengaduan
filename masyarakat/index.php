@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (empty($_SESSION['login'] == 'masyarakat')) {
+    echo "<script>
+                alert('Silahkan login dulu');
+                window.location='../index.php?page=login';
+            </script>";
+}
 include '../template/header.php';
 
 if (isset($_GET['page'])) {
